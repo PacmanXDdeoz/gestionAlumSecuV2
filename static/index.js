@@ -1,4 +1,4 @@
-import { grupos, primeroA  } from './datos.js'
+import { primeroD } from './datos.js'
 
 const grado = document.getElementById('grade')
 const grupo = document.getElementById('group')
@@ -22,8 +22,6 @@ const imprimirTabla = (lista) =>{
             <td>${alumno.id}</td>
             <td>${alumno.Genero === 'Hombre' ? 'H' : 'M'}</td>
             <td>${alumno.nombre}</td>
-            <td>${alumno.Actividades[0].cuaderno}</td>
-            <td>${alumno.Actividades[0].portada}</td>
             <td><strong>${textoStatus}</strong></td>
             </tr>
             `;
@@ -32,16 +30,16 @@ const imprimirTabla = (lista) =>{
         tbody.innerHTML = filas;
     }
 
-imprimirTabla(primeroA)
+imprimirTabla(primeroD)
 
-opc.addEventListener('click', function(){
+// opc.addEventListener('click', function(){
 
-    const select = grado.value + grupo.value
-    const listaSelect = grupos[select]
+//     const select = grado.value + grupo.value
+//     const listaSelect = grupos[select]
 
-    if (listaSelect){
-        imprimirTabla(listaSelect)
-    } else {
-        tbody.innerHTML = '<tr><td colspan="4">No hay datos para esta selección</td></tr>'
-    }
-})
+//     if (listaSelect){
+//         imprimirTabla(listaSelect)
+//     } else {
+//         tbody.innerHTML = '<tr><td colspan="4">No hay datos para esta selección</td></tr>'
+//     }
+// })
